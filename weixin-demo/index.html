@@ -147,15 +147,15 @@
 	console.log(currenUrl);
 $.ajax({
 	type: "post",
-	url: "http://js.kecikeci.com/crius/weixin/getAccessToken",
+	url: "http://xxxx/getAccessToken",
 	contentType: "application/json",
-	data:JSON.stringify({code:code, url:currenUrl}),
+	data:{code:code, url:currenUrl},
 	success: function (response) {
 		if (response.success) {
 			var weidata =response.data.weixin;
 			wx.config({
 				debug: true,
-				appId: 'wx67b04d0170e762ad',
+				appId: 'xxxxxxxxxxxx',
 				timestamp: weidata.timestamp,
 				nonceStr: weidata.noncestr,
 				signature: weidata.signature,
